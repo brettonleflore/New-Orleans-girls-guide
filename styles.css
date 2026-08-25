@@ -324,3 +324,77 @@ header{
   .drink-collage img,.drink-collage img:nth-child(2){height:230px;margin-top:0}
   .reglr-grid{grid-template-columns:1fr}
 }
+
+
+/* V8 — refined Reglr editorial note */
+.reglr-feature{display:none!important}
+.reglr-note{
+  max-width:1180px;
+  margin:34px auto 74px;
+  padding:28px 36px 32px;
+  display:grid;
+  grid-template-columns:190px 1fr;
+  gap:42px;
+  align-items:start;
+  background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+  border-top:1px solid rgba(255,255,255,.15);
+  border-bottom:1px solid rgba(255,255,255,.11);
+  box-shadow:inset 0 1px rgba(255,255,255,.035);
+}
+.reglr-note-label{
+  padding-top:8px;
+  color:#df7d87;
+  font-size:9px;
+  letter-spacing:2.6px;
+  line-height:1.6;
+}
+.reglr-note-copy{max-width:760px}
+.reglr-note h2{
+  margin:0 0 8px;
+  color:#f6eee6;
+  font:500 clamp(30px,3.3vw,48px)/1 "Cormorant Garamond";
+}
+.reglr-note h2 i{
+  color:#ed8993;
+  font-family:"Allura";
+  font-size:1.25em;
+  font-weight:400;
+}
+.reglr-note p{
+  margin:0 0 17px;
+  color:#aaa19a;
+  font-size:13px;
+  line-height:1.75;
+}
+.reglr-note a{
+  color:#e98b94;
+  text-decoration:none;
+  font-size:9px;
+  letter-spacing:2px;
+}
+.reglr-note a:hover{color:#ffb1b8}
+
+/* Crop correction: preserve subject rather than over-zooming imagery */
+.drink-collage img{
+  object-fit:cover;
+  object-position:center center;
+}
+.drink-collage img:nth-child(2){
+  object-position:center 42%;
+}
+.night-ribbon img{
+  object-position:center center;
+}
+.restaurant-photo-card::before{
+  background-size:cover;
+  background-position:center center;
+}
+
+@media(max-width:760px){
+  .reglr-note{
+    margin:20px 18px 55px;
+    padding:24px;
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+}
