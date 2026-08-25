@@ -451,3 +451,72 @@ header{
   #drink .drink-collage{grid-template-columns:1fr 1fr}
   #drink .drink-collage img{height:235px}
 }
+
+
+/* V13 — drink gallery alignment correction
+   All five drink images sit on the same visual plane with identical frames. */
+#drink .drink-collage{
+  display:grid !important;
+  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+  gap:10px !important;
+  align-items:stretch !important;
+  justify-items:stretch !important;
+  margin:0 0 36px !important;
+}
+
+#drink .drink-collage img,
+#drink .drink-collage img:nth-child(1),
+#drink .drink-collage img:nth-child(2),
+#drink .drink-collage img:nth-child(3),
+#drink .drink-collage img:nth-child(4),
+#drink .drink-collage img:nth-child(5){
+  display:block !important;
+  width:100% !important;
+  height:320px !important;
+  min-height:320px !important;
+  max-height:320px !important;
+  margin:0 !important;
+  padding:0 !important;
+  align-self:stretch !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  border-radius:0 !important;
+  border:1px solid rgba(255,255,255,.13) !important;
+  background:#090909 !important;
+  box-sizing:border-box !important;
+  filter:saturate(.9) brightness(.8) contrast(1.02);
+}
+
+/* Keep the tall blue-background cocktail centered without creating a different-height card. */
+#drink .drink-collage img:nth-child(2){
+  object-fit:cover !important;
+  object-position:center 50% !important;
+}
+
+/* Fine-tuned subject centering for the other supplied images. */
+#drink .drink-collage img:nth-child(3){
+  object-position:center 46% !important;
+}
+#drink .drink-collage img:nth-child(4){
+  object-position:center 48% !important;
+}
+#drink .drink-collage img:nth-child(5){
+  object-position:center 50% !important;
+}
+
+@media(max-width:1100px){
+  #drink .drink-collage{
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  }
+}
+@media(max-width:760px){
+  #drink .drink-collage{
+    grid-template-columns:1fr 1fr !important;
+  }
+  #drink .drink-collage img,
+  #drink .drink-collage img:nth-child(n){
+    height:240px !important;
+    min-height:240px !important;
+    max-height:240px !important;
+  }
+}
