@@ -398,3 +398,11 @@ header{
     gap:14px;
   }
 }
+
+/* V9 — luxe photography pass: compositions are intentionally preserved */
+.drink-collage img{object-position:center!important}
+.drink-collage img:nth-child(1){object-position:center 45%!important}
+.drink-collage img:nth-child(2){object-position:center 58%!important}
+.drink-collage img:nth-child(3){object-position:center 50%!important}
+.drink-collage img:nth-child(4){object-position:center 50%!important}
+.section-photo-strip img{object-position:center center!important}
