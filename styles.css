@@ -126,3 +126,18 @@
   filter:saturate(.82) brightness(.78) contrast(1.04);
   border:1px solid rgba(0,0,0,.12);
 }
+
+
+/* V6: selective image-card rhythm */
+.cards article.restaurant-photo-card:nth-child(4n+1)::before{
+  background-position:center 35%;
+}
+.cards article.restaurant-photo-card:nth-child(4n+3)::before{
+  background-position:center 55%;
+}
+.cards article.restaurant-photo-card:nth-child(even){
+  min-height:300px;
+}
+.cards article.restaurant-photo-card:nth-child(odd){
+  min-height:340px;
+}
