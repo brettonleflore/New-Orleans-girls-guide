@@ -128,3 +128,144 @@
 @keyframes dropFall{0%{opacity:0;transform:translateY(-7px) scale(.65)}25%{opacity:1}100%{opacity:0;transform:translateY(19px) scale(1)}}
 @keyframes fizz{0%{opacity:0;transform:translateY(8px) scale(.55)}30%{opacity:.95}100%{opacity:0;transform:translateY(-24px) scale(1.15)}}
 @media(prefers-reduced-motion:reduce){.pour-highlight,.spill-highlight,.pour-drops circle,.glass-bubbles circle{animation:none}}
+
+/* v10: bubbles-only champagne animation — no artificial pour lines */
+.fizz-overlay{position:absolute;inset:0;z-index:4;pointer-events:none;overflow:hidden}
+.fizz-zone{position:absolute;width:22%;height:10%;overflow:hidden;border-radius:45% 45% 52% 52%}
+.fizz-zone::before,.fizz-zone::after{content:"";position:absolute;inset:10% 8% 2%;background-image:radial-gradient(circle at center,rgba(255,255,238,.98) 0 1.3px,rgba(235,183,50,.78) 1.5px 2.4px,transparent 2.7px),radial-gradient(circle at center,rgba(255,249,205,.95) 0 1px,rgba(218,154,23,.65) 1.2px 2px,transparent 2.2px),radial-gradient(circle at center,rgba(255,255,245,.9) 0 1.5px,rgba(231,175,37,.6) 1.7px 2.6px,transparent 2.9px);background-size:31px 37px,43px 49px,57px 61px;background-position:3px 18px,17px 4px,29px 28px;animation:glassFizz 2.2s linear infinite;opacity:.95}
+.fizz-zone::after{background-size:37px 43px,49px 55px,63px 69px;background-position:20px 28px,5px 15px,37px 2px;animation-duration:2.85s;animation-delay:-1.1s;opacity:.72}
+@keyframes glassFizz{0%{transform:translateY(18px);opacity:0}15%{opacity:.9}80%{opacity:.8}100%{transform:translateY(-32px);opacity:0}}
+.fz1{left:38.7%;top:25.7%;width:22.5%;height:9.5%}
+.fz2{left:22.5%;top:40.7%;width:21.5%;height:9.8%}
+.fz3{left:56.0%;top:40.7%;width:21.5%;height:9.8%}
+.fz4{left:9.0%;top:55.8%;width:21%;height:9.5%}
+.fz5{left:39.2%;top:55.8%;width:21%;height:9.5%}
+.fz6{left:69.0%;top:55.8%;width:21%;height:9.5%}
+.fz7{left:23.0%;top:70.7%;width:21%;height:9.4%}
+.fz8{left:56.0%;top:70.7%;width:21%;height:9.4%}
+.fz9{left:40.5%;top:83.5%;width:19%;height:8%}
+@media(prefers-reduced-motion:reduce){.fizz-zone::before,.fizz-zone::after{animation:none;opacity:.55}}
+
+/* v10 local shopping guide */
+.shopping-edit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:38px 0 70px}
+.shopping-edit-card{background:#fffaf3;border:1px solid #e3c7b5;border-radius:18px;padding:26px 22px;min-height:245px;display:flex;flex-direction:column;box-shadow:0 9px 25px rgba(48,31,22,.07);transition:.22s}
+.shopping-edit-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(48,31,22,.13)}
+.shopping-edit-card span{font-size:10px;font-weight:800;letter-spacing:.13em;color:var(--pink)}
+.shopping-edit-card h3{font-family:'DM Serif Display',serif;font-size:28px;color:var(--emerald);margin:12px 0 10px;line-height:1}
+.shopping-edit-card p{font-size:14px;line-height:1.55;color:#443b35;flex:1}.shopping-edit-card b{font-size:11px;letter-spacing:.08em;color:var(--pink);text-transform:uppercase;margin-top:18px}
+.shopping-route{background:#143f3b;color:#fff;padding:68px 0;margin:20px 0 70px}.shopping-route h2{font-family:'DM Serif Display',serif;font-size:48px;margin:8px 0 14px}.shopping-route p:last-child{max-width:760px;line-height:1.7}
+@media(max-width:900px){.shopping-edit-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.shopping-edit-grid{grid-template-columns:1fr}.shopping-edit-card{min-height:0}.shopping-route h2{font-size:38px}}
+
+/* v12 iPhone / mobile polish */
+html,body{width:100%;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a,button{touch-action:manipulation}
+
+@media(max-width:700px){
+  .site-header{height:74px;min-height:74px;padding:8px 16px;gap:10px;position:sticky;top:0;align-items:center}
+  .site-header .brand{width:auto;min-width:0;flex:0 1 auto}
+  .site-header .brand span{font-size:25px;line-height:.82}
+  .site-header .brand strong{font-size:27px;line-height:.85;letter-spacing:.06em}
+  .menu-toggle{display:flex;align-items:center;justify-content:center;margin-left:auto;width:44px;height:44px;border-radius:50%;font-size:24px;line-height:1;color:var(--emerald);background:#fff7ef;border:1px solid rgba(13,79,60,.18);position:relative;z-index:33}
+  .menu-toggle:focus-visible{outline:3px solid rgba(217,71,112,.3);outline-offset:2px}
+  .site-header nav{display:flex;position:absolute;left:12px;right:12px;top:68px;margin:0;padding:10px;background:rgba(255,250,243,.985);border:1px solid rgba(13,79,60,.12);border-radius:18px;box-shadow:0 18px 45px rgba(19,37,31,.16);flex-direction:column;gap:0;opacity:0;visibility:hidden;transform:translateY(-8px);pointer-events:none;transition:opacity .18s ease,transform .18s ease,visibility .18s ease;max-height:calc(100dvh - 90px);overflow:auto;z-index:32}
+  .site-header.menu-open nav{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+  .site-header nav a{display:flex;align-items:center;min-height:48px;padding:10px 13px;border-radius:12px;font-size:14px;letter-spacing:.02em}
+  .site-header nav a+ a{border-top:1px solid rgba(0,0,0,.05)}
+  .site-header nav a:active{background:#f8e6e8}
+  .plan-btn{display:none}
+
+  .hero{min-height:0}
+  .hero>img{height:min(122vw,540px);min-height:390px;object-position:40% center}
+  .hero-overlay{padding:0 18px 32px;justify-content:flex-end;align-items:center;background:linear-gradient(0deg,rgba(12,18,15,.58) 0%,rgba(12,18,15,.18) 46%,transparent 72%)}
+  .marquee{font-size:clamp(45px,13vw,64px);line-height:.88;-webkit-text-stroke:1px #fff;text-wrap:balance}
+  .script{font-size:clamp(31px,9.5vw,41px);margin:10px 0 14px;line-height:1.05}
+  .hero-btn{width:min(88vw,340px);min-height:48px;display:flex;align-items:center;justify-content:center;border-radius:3px;font-size:15px}
+
+  .guide-intro{padding:42px 20px 46px}
+  .guide-intro h1,.section-heading h2,.feature-copy h2,.about h2,.shop-tease h2,.shop-hero h1,.custom-form h2{font-size:clamp(35px,10.5vw,48px);line-height:.98;text-wrap:balance}
+  .section-heading{margin-bottom:22px}
+  .section-heading p,.guide-intro>p,.about p:last-child{font-size:15px;line-height:1.6}
+  .eyebrow{font-size:10px;letter-spacing:.15em}
+  .section-wrap{padding:48px 20px}
+  .cheeky-band{padding:16px 20px;font-size:22px;line-height:1.25}
+
+  .circle-grid{gap:22px;margin-top:24px}
+  .circle-card{width:100%;max-width:300px}
+  .circle-card span{font-size:14px}
+
+  .stay-showcase{overflow:hidden}
+  .stay-hero{display:block;padding:34px 16px 18px}
+  .pop-art-hero{padding:34px 14px 20px!important}
+  .pop-art-hero .luggage-scene img{width:100%;border-radius:18px;box-shadow:0 14px 36px rgba(43,18,34,.14)}
+  .stay-grid{grid-template-columns:1fr!important;gap:16px!important;padding-left:18px!important;padding-right:18px!important}
+  .stay-card{width:100%;max-width:480px;margin-inline:auto}
+  .stay-card-photo{height:auto!important;aspect-ratio:4/3;object-fit:cover}
+  .stay-cheek{padding-left:20px;padding-right:20px;text-align:center}
+  .feature-art.moved-art{padding-left:18px;padding-right:18px}
+
+  #restaurantCards.restaurant-art-grid,#restaurantCards{grid-template-columns:1fr;gap:18px}
+  .restaurant-painting{max-width:480px;width:100%;margin-inline:auto;border-radius:14px;padding:9px 9px 15px}
+  .restaurant-painting::after{display:none}
+  .painting-frame{aspect-ratio:1.12/1;border-width:3px}
+  .painting-caption{padding:13px 7px 2px}
+  .painting-caption h3{font-size:26px;line-height:1.02}
+  .painting-caption p{font-size:14px;line-height:1.5;margin-bottom:10px}
+  .painting-caption span{font-size:10px}
+
+  .cards,.dark-cards{grid-template-columns:1fr!important;gap:14px}
+  .card{min-height:0;border-radius:18px;padding:20px}
+  .card h3{font-size:25px}
+  .card p{font-size:14px}
+
+  .champagne-section{overflow:hidden}
+  .champagne-layout{display:flex;flex-direction:column;gap:22px;padding:48px 14px!important}
+  .champagne-copy{padding:0 8px;text-align:center}
+  .champagne-copy h2{font-size:clamp(42px,12vw,58px);line-height:.94}
+  .champagne-copy p{font-size:15px;line-height:1.6}
+  .animated-tower{width:100%;max-width:480px;margin:0 auto;aspect-ratio:653/1024;min-height:0}
+  .tower-art{width:100%;height:100%;object-fit:contain;border-radius:18px}
+  .glass-link{min-width:38px;min-height:38px}
+
+  .favorite-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 14px}
+  .favorite-row>div:last-child{grid-column:1/-1;width:50%;max-width:170px;justify-self:center}
+  .favorite-row b{font-size:13px}.favorite-row span{font-size:11px;line-height:1.4}
+  .neighborhood-grid,.timeline,.truth-grid{grid-template-columns:1fr;gap:13px}
+  .neighborhood-grid article,.timeline article{padding:21px;border-radius:16px}
+  .neighborhood-grid h3,.timeline h3{font-size:27px;margin-bottom:10px}
+
+  .shop-tease{grid-template-columns:1fr;padding:48px 20px;text-align:center;gap:28px}
+  .shop-tease img{order:-1;width:min(62vw,240px)}
+  .shop-tease .btn{width:100%;max-width:340px;min-height:48px;display:flex;align-items:center;justify-content:center;margin:18px auto 0}
+  .about{padding-left:22px;padding-right:22px}
+  footer{padding:30px 22px;flex-direction:column;text-align:center;gap:15px}
+  footer nav{gap:8px;flex-wrap:wrap;justify-content:center}
+  footer nav a{padding:10px 12px;min-height:44px;display:flex;align-items:center}
+
+  .shop-hero{grid-template-columns:1fr;padding:48px 20px;gap:28px;text-align:center;min-height:0}
+  .shop-hero img{max-width:min(78vw,330px);justify-self:center}
+  .product-grid,.shopping-edit-grid{grid-template-columns:1fr!important;gap:14px}
+  .shopping-edit-grid{margin:28px 0 50px}
+  .shopping-edit-card{padding:22px 20px;border-radius:16px}
+  .shopping-route{padding:48px 0;margin:10px 0 50px}
+  .shopping-route .section-wrap{padding-top:0;padding-bottom:0}
+  .shopping-route h2{font-size:38px;line-height:1}
+  .custom-form{margin:14px 14px 55px;padding:22px!important;gap:28px}
+  .custom-form input,.custom-form select,.custom-form textarea{font-size:16px;min-height:48px}
+}
+
+@media(max-width:390px){
+  .site-header{padding-left:12px;padding-right:12px}
+  .site-header .brand span{font-size:22px}.site-header .brand strong{font-size:24px}
+  .hero>img{height:128vw;min-height:375px}
+  .marquee{font-size:12.3vw}
+  .section-wrap{padding-left:17px;padding-right:17px}
+  .painting-caption h3{font-size:24px}
+  .favorite-row{gap:14px 10px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
+}

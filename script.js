@@ -56,3 +56,24 @@ const tower=document.getElementById('drinkTower');if(tower){tower.innerHTML=drin
 document.querySelectorAll('[data-flicker]').forEach(line=>{const chars=[...line.textContent];line.textContent='';chars.forEach(c=>{const s=document.createElement('span');s.className='marquee-letter';s.innerHTML=c===' '?'&nbsp;':c;line.appendChild(s)})});
 const letters=[...document.querySelectorAll('.marquee-letter')];
 setInterval(()=>{letters.forEach(l=>l.classList.remove('dim'));const count=Math.random()<.28?Math.ceil(Math.random()*4):1;for(let i=0;i<count;i++){const l=letters[Math.floor(Math.random()*letters.length)];if(l)l.classList.add('dim')}} ,180);
+
+// v12 mobile navigation: accessible, touch-friendly iPhone menu
+const mobileHeader=document.querySelector('.site-header');
+const mobileToggle=document.querySelector('.menu-toggle');
+const mobileNav=mobileHeader?.querySelector('nav');
+if(mobileHeader&&mobileToggle&&mobileNav){
+  mobileToggle.setAttribute('aria-expanded','false');
+  mobileToggle.setAttribute('aria-controls','primary-navigation');
+  mobileNav.id='primary-navigation';
+  const closeMobileMenu=()=>{mobileHeader.classList.remove('menu-open');mobileToggle.setAttribute('aria-expanded','false');mobileToggle.textContent='☰';};
+  mobileToggle.addEventListener('click',()=>{
+    const open=!mobileHeader.classList.contains('menu-open');
+    mobileHeader.classList.toggle('menu-open',open);
+    mobileToggle.setAttribute('aria-expanded',String(open));
+    mobileToggle.textContent=open?'×':'☰';
+  });
+  mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMobileMenu));
+  document.addEventListener('click',e=>{if(mobileHeader.classList.contains('menu-open')&&!mobileHeader.contains(e.target))closeMobileMenu();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobileMenu();});
+  window.addEventListener('resize',()=>{if(window.innerWidth>700)closeMobileMenu();});
+}
