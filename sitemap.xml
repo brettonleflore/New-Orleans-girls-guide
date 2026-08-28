@@ -7,7 +7,37 @@
   </url>
   <url>
     <loc>https://www.neworleansgirlstripguide.com/shop.html</loc>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neworleansgirlstripguide.com/new-orleans-bachelorette-party.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.neworleansgirlstripguide.com/where-to-stay-new-orleans-bachelorette.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.neworleansgirlstripguide.com/new-orleans-bachelorette-itinerary.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.neworleansgirlstripguide.com/best-restaurants-new-orleans-bachelorette.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.neworleansgirlstripguide.com/best-cocktail-bars-new-orleans-bachelorette.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.neworleansgirlstripguide.com/unique-things-to-do-new-orleans-bachelorette.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
