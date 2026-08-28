@@ -1,683 +1,130 @@
-:root{--black:#0b0b0b;--cream:#f4efe7;--rose:#cf7279;--gold:#b69055;--ink:#191817}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:#f6f0e8;font-family:Montserrat,sans-serif}header{height:76px;display:flex;align-items:center;padding:0 3vw;border-bottom:1px solid #292929;position:sticky;top:0;background:#0b0b0bf5;z-index:10}.logo{color:white;text-decoration:none;width:190px}.logo strong{display:block;font:38px/30px 'Cormorant Garamond';letter-spacing:3px}.logo small{color:var(--rose);letter-spacing:2px}nav{display:flex;gap:2.6vw;margin:auto}nav a,.cta{color:white;text-decoration:none;font-size:10px;letter-spacing:1.5px}.cta{border:1px solid var(--rose);padding:14px 18px}.menu{display:none}.hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:590px}.hero-photo{position:relative;overflow:hidden}.hero-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.75) brightness(.58)}.script{position:absolute;top:12%;left:8%;font:42px Allura;color:#e78289}.hero-copy{background:var(--cream);color:var(--ink);padding:8% 12%}.hero-copy span,.section-title span,.split span,.weekend span{font-size:11px;letter-spacing:2px}.hero h1{font:500 clamp(52px,6vw,90px)/.9 'Cormorant Garamond';margin:28px 0}.hero h1 i{color:var(--rose);font-style:normal}.hero-copy p{max-width:440px;line-height:1.8}.button{display:inline-block;margin-top:22px;background:#111;color:white;text-decoration:none;padding:16px 22px;font-size:10px;letter-spacing:1.2px}.shortlist{padding:28px 3vw;display:grid;grid-template-columns:1.2fr repeat(6,1fr);gap:12px}.short-intro{padding:15px}.short-intro em{font:38px Allura;color:var(--gold)}.short-intro p{font-size:10px;line-height:2;letter-spacing:1px}.shortlist>a{min-height:210px;border:1px solid #3b342e;padding:22px;color:white;text-decoration:none;background:linear-gradient(145deg,#211d1a,#0d0d0d)}.shortlist b{font:24px 'Cormorant Garamond';display:block;color:#d8c9b7}.shortlist strong{display:block;margin:30px 0 10px;font-size:12px;letter-spacing:1.5px}.shortlist small{color:#bbb;line-height:1.5}.stay,.cream,.dark,.weekend{padding:85px 6vw}.stay{background:var(--cream);color:var(--ink)}.section-title{max-width:650px;margin-bottom:42px}.section-title h2,.split h2,.weekend h2{font:500 clamp(50px,6vw,78px)/.95 'Cormorant Garamond';margin:10px 0}.section-title p{line-height:1.7}.maison{display:grid;grid-template-columns:.85fr 1.15fr;background:#151413;color:#eee}.maison>div{padding:55px}.maison img{width:100%;height:100%;object-fit:cover;max-height:570px}.maison h3{font:58px 'Cormorant Garamond';margin:16px 0 0}.maison .dek{font:25px 'Cormorant Garamond';color:#e4c3bd}.maison p{line-height:1.8}.pick{color:var(--rose);font-size:10px;letter-spacing:2px}.rose{background:var(--rose)}.hotel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#cfc6b9;margin-top:30px}.hotel-grid article{background:#fffaf3;padding:35px}.hotel-grid span{font-size:9px;letter-spacing:2px;color:var(--rose)}.hotel-grid h3{font:35px 'Cormorant Garamond';margin:12px 0}.hotel-grid p{font-size:13px;line-height:1.7}.funnel{text-align:center;padding:55px 20px}.funnel h3{font:50px 'Cormorant Garamond';margin:5px}.funnel a{color:var(--rose);font-size:11px;letter-spacing:2px}.cream{background:#f7f2ea;color:var(--ink)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.cards article{border-top:1px solid #a89c8d;padding:25px 5px}.cards h3{font:32px 'Cormorant Garamond';margin:5px 0}.dark{background:#101010}.list{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #333}.list b{padding:18px;border-bottom:1px solid #333;color:#e5ddd3;font:22px 'Cormorant Garamond'}.split{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:7vw}.split img{width:100%;max-height:560px;object-fit:cover}.split p{line-height:1.8}.reverse{background:#111;color:#eee}.weekend{display:grid;grid-template-columns:1.4fr .6fr;gap:8vw}.weekend p{line-height:1.8}.tips{border-left:1px solid #444;padding-left:35px}.tips b{color:var(--rose);font-size:11px;letter-spacing:1px}footer{padding:28px 6vw;background:var(--rose);display:flex;justify-content:space-between;font-size:11px;letter-spacing:2px}@media(max-width:900px){header nav{display:none;position:absolute;top:76px;left:0;right:0;background:#111;padding:25px;flex-direction:column}header nav.open{display:flex}.menu{display:block;margin-left:auto;background:none;color:white;border:0;font-size:22px}.cta{display:none}.hero,.maison,.split,.weekend{grid-template-columns:1fr}.hero-photo{min-height:430px}.shortlist{grid-template-columns:1fr 1fr}.short-intro{grid-column:1/-1}.hotel-grid,.cards,.list{grid-template-columns:1fr}.maison>div{padding:35px}.stay,.cream,.dark,.weekend{padding:60px 6vw}}
-.hero-photo{background:radial-gradient(circle at 20% 20%,#4a2528,transparent 35%),linear-gradient(145deg,#161111,#050505)}.hero-monogram{position:absolute;right:-2%;bottom:-12%;font:600 240px/.8 'Cormorant Garamond';color:#ffffff08;letter-spacing:-14px}.hero-kicker{position:absolute;bottom:8%;left:8%;letter-spacing:4px;color:#d2b8a0}.property-art{min-height:500px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:radial-gradient(circle at 50% 45%,#d08b8b33,transparent 35%),linear-gradient(135deg,#2b2020,#0b0b0b);border-left:1px solid #463837}.property-art span,.property-art small{letter-spacing:4px;color:#d5b49f}.property-art strong{font:500 clamp(55px,7vw,100px)/.78 'Cormorant Garamond';color:#f3e9dd;margin:30px 0}.hotel-grid h3 a,.cards h3 a{color:inherit;text-decoration:none}.hotel-grid h3 a:hover,.cards h3 a:hover{color:var(--rose)}.cards article>span{font-size:9px;letter-spacing:2px;color:var(--rose)}.drink-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #333}.drink-grid a{padding:22px 18px;border-bottom:1px solid #333;color:#e5ddd3;text-decoration:none;display:flex;flex-direction:column;gap:7px}.drink-grid a:hover{background:#181414}.drink-grid b{font:25px 'Cormorant Garamond'}.drink-grid small{font-size:8px;letter-spacing:1.6px;color:#b78d8e}.editorial-collage{min-height:500px;background:linear-gradient(145deg,#2a1b1d,#090909);position:relative;border:1px solid #3b3030}.editorial-collage span,.editorial-collage b,.editorial-collage i,.editorial-collage small{position:absolute}.editorial-collage span{top:10%;left:9%;font:60px 'Cormorant Garamond';color:#e8d9c8}.editorial-collage b{right:7%;top:35%;font:38px 'Cormorant Garamond';color:var(--rose);transform:rotate(-6deg)}.editorial-collage i{left:13%;bottom:22%;font:42px Allura;color:var(--gold)}.editorial-collage small{right:8%;bottom:8%;letter-spacing:3px;color:#a99a8d}@media(max-width:900px){.drink-grid{grid-template-columns:1fr}}
+:root{--cream:#fbf4ea;--paper:#fffaf3;--pink:#d94770;--rose:#f4b7c5;--emerald:#0d4f3c;--deep:#13251f;--gold:#c79a2a;--ink:#181818;--citron:#e8e26f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.site-header{height:92px;display:flex;align-items:center;gap:28px;padding:12px 4vw;background:rgba(255,250,243,.96);position:sticky;top:0;z-index:30;border-bottom:1px solid rgba(0,0,0,.07);backdrop-filter:blur(10px)}.brand{width:180px;display:flex;flex-direction:column;line-height:.85}.brand span{font-family:Parisienne,cursive;color:var(--pink);font-size:36px}.brand strong{font-family:'DM Serif Display',serif;color:var(--emerald);font-size:38px;letter-spacing:.08em}.site-header nav{display:flex;gap:26px;margin-left:auto}.site-header nav a{font-size:13px;font-weight:700;letter-spacing:.04em}.site-header nav a:hover,.active{color:var(--pink)}.plan-btn,.hero-btn{background:var(--pink);color:white;padding:14px 19px;font-family:'DM Serif Display',serif;letter-spacing:.03em}.menu-toggle{display:none;background:none;border:0;font-size:28px}.hero{position:relative;background:#111;min-height:420px;overflow:hidden}.hero>img{width:100%;height:clamp(420px,47vw,620px);object-fit:cover;object-position:center}.hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-left:34%;text-align:center;background:linear-gradient(90deg,transparent 30%,rgba(0,0,0,.06) 52%,rgba(0,0,0,.25))}.marquee{font-family:'DM Serif Display',serif;font-size:clamp(48px,7vw,96px);line-height:.85;color:#f24c78;text-transform:uppercase;letter-spacing:.02em;-webkit-text-stroke:3px #fff;text-shadow:0 0 3px #fff,0 0 15px #ffca54,4px 4px 0 #7a242c}.marquee-line{display:flex;justify-content:center;gap:.02em}.marquee-letter{display:inline-block;transition:opacity .09s,filter .09s;text-shadow:0 0 4px #fff,0 0 14px #ffe79d,0 0 25px #f14c78}.marquee-letter.dim{opacity:.46;filter:saturate(.7);text-shadow:0 0 2px #fff}.script{font-family:Parisienne,cursive;font-size:clamp(30px,4vw,52px);margin:12px 0 18px;color:white}.script.dark{color:#111}.hero-btn{font-size:16px}.paper{background:radial-gradient(circle at 30% 0%,#fff 0,#fbf4ea 62%)}.guide-intro{padding:48px 3vw 56px;text-align:center}.eyebrow{font-weight:700;letter-spacing:.18em;font-size:12px;color:var(--pink);text-transform:uppercase}.guide-intro h1,.section-heading h2,.feature-copy h2,.about h2,.shop-tease h2,.shop-hero h1,.custom-form h2{font-family:'DM Serif Display',serif;font-size:clamp(38px,5vw,64px);line-height:1;margin:8px 0;color:var(--pink)}.circle-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:28px}.circle-card img{width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;border:2px solid var(--pink);transition:.25s}.circle-card:hover img{transform:translateY(-6px) rotate(1deg);box-shadow:0 14px 32px rgba(0,0,0,.12)}.circle-card span{display:block;margin-top:12px;color:var(--pink);font-weight:700}.cheeky-band{padding:18px 6vw;text-align:center;font-family:'DM Serif Display',serif;font-size:clamp(20px,3vw,34px)}.cheeky-band em{font-family:Parisienne,cursive;font-size:1.25em}.deep{background:var(--deep);color:#fff}.rose{background:var(--rose)}.citron{background:var(--citron);color:var(--deep)}.section-wrap{max-width:1200px;margin:auto;padding:72px 5vw}.split-feature{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}.feature-copy h2{color:var(--emerald)}.lede{font-size:19px;line-height:1.55}.feature-copy p{line-height:1.65}.feature-art img{border-radius:34px;box-shadow:0 18px 50px rgba(25,52,42,.15)}.mini-points{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0}.mini-points span{padding:8px 12px;border:1px solid var(--rose);border-radius:999px;font-size:12px}.buttons{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-block;padding:13px 18px;font-weight:700;font-size:13px;border:0;cursor:pointer}.btn.green{background:var(--emerald);color:#fff}.btn.pink{background:var(--pink);color:white}.btn.outline{border:1px solid var(--emerald);color:var(--emerald);background:transparent}.section-heading{max-width:740px;margin-bottom:28px}.section-heading h2{color:var(--emerald)}.section-heading.centered{text-align:center;margin:0 auto 34px}.section-heading.light h2,.section-heading.light p{color:white}.eyebrow.gold{color:#f2d56b}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:white;border:1px solid #eadbce;border-radius:20px;padding:22px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.08)}.card h3{font-family:'DM Serif Display',serif;font-size:24px;margin:0 0 8px}.card p{font-size:14px;line-height:1.55;margin:0}.tag{font-size:11px;color:var(--pink);font-weight:700;letter-spacing:.08em;margin-top:18px}.deep-section{background:var(--deep)}.dark-cards .card{background:#173429;color:#fff;border-color:#315145}.dark-cards .tag{color:#f5cf68}.favorites{padding:70px 4vw}.favorite-row{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;max-width:1200px;margin:auto}.favorite-row>div{text-align:center}.favorite-row img{width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;border:2px solid var(--pink)}.favorite-row b{display:block;margin-top:12px;color:var(--emerald)}.favorite-row span{display:block;font-size:12px;margin-top:4px}.neighborhood-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.neighborhood-grid article{border-top:5px solid var(--pink);background:#fff;padding:24px}.neighborhood-grid h3{font-family:'DM Serif Display',serif;color:var(--emerald);font-size:26px;margin-top:0}.neighborhood-grid p{line-height:1.6}.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.timeline article{background:white;border-radius:22px;padding:28px;border:1px solid #ecdccf}.timeline span{color:var(--pink);font-weight:700;letter-spacing:.16em;font-size:12px}.timeline h3{font-family:'DM Serif Display',serif;color:var(--emerald);font-size:28px}.timeline p{line-height:1.6}.truth-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.truth-grid p{background:#fff;padding:20px;border-left:5px solid var(--gold);margin:0}.shop-tease{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:34px;background:linear-gradient(120deg,#f7bdcb,#fff0d7);padding:65px max(5vw,calc((100vw - 1200px)/2))}.shop-tease img{width:260px;aspect-ratio:1;border-radius:50%;justify-self:center;border:3px solid var(--pink)}.about{text-align:center;max-width:820px}.about p:last-child{font-size:18px;line-height:1.7}footer{background:var(--emerald);color:white;padding:34px 5vw;display:flex;align-items:center;gap:28px;justify-content:center;flex-wrap:wrap}footer nav{display:flex;gap:18px}.footer-brand{width:auto}.footer-brand strong{color:#fff}.shop-hero{min-height:500px;background:var(--deep);color:white;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;padding:80px 8vw;gap:40px}.shop-hero h1{color:white;max-width:700px}.shop-hero img{border-radius:50%;border:4px solid var(--gold);max-width:420px}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.product-grid article{background:white;border-radius:22px;padding:26px;border:1px solid #eadbce}.product-grid h3{font-family:'DM Serif Display',serif;color:var(--emerald);font-size:26px}.custom-form{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;background:#fff;border-radius:30px;margin-bottom:70px}.custom-form form{display:grid;gap:14px}.custom-form label{font-weight:700;font-size:13px}.custom-form input,.custom-form select,.custom-form textarea{width:100%;padding:13px;border:1px solid #d9cabc;border-radius:9px;margin-top:6px;font:inherit}.custom-form textarea{min-height:120px}.form-note{color:var(--emerald);font-weight:700}
+@media(max-width:900px){.site-header{height:auto;min-height:78px}.site-header nav{display:none}.menu-toggle{display:block;margin-left:auto}.plan-btn{display:none}.hero-overlay{padding-left:18%;background:rgba(0,0,0,.08)}.marquee{font-size:11vw}.circle-grid{grid-template-columns:repeat(2,1fr)}.circle-card:last-child{grid-column:1/-1;max-width:48%;justify-self:center}.split-feature,.shop-tease,.shop-hero,.custom-form{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.favorite-row{grid-template-columns:repeat(2,1fr)}.favorite-row>div:last-child{grid-column:1/-1;max-width:45%;justify-self:center}.neighborhood-grid{grid-template-columns:1fr 1fr}.timeline{grid-template-columns:1fr}.product-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.brand{width:145px}.brand span{font-size:30px}.brand strong{font-size:31px}.hero>img{height:440px;object-position:42% center}.hero-overlay{padding:0 12px;justify-content:flex-end;padding-bottom:40px;background:linear-gradient(0deg,rgba(0,0,0,.45),transparent 62%)}.marquee{font-size:13vw;-webkit-text-stroke:1px #fff}.script{font-size:36px}.circle-grid,.cards,.neighborhood-grid,.truth-grid,.product-grid{grid-template-columns:1fr}.circle-card{max-width:270px;justify-self:center}.circle-card:last-child{max-width:270px}.favorite-row{grid-template-columns:1fr 1fr;gap:14px}.section-wrap{padding:55px 6vw}.shop-tease{padding:55px 6vw}.shop-tease img{width:220px}.custom-form{margin:20px;border-radius:20px}}
+/* 2026 stay + cocktail editorial refresh */
+.stay-showcase{background:linear-gradient(180deg,#fff7ef 0%,#f8dfdf 48%,#fff8f0 100%);overflow:hidden}.stay-hero{display:grid;grid-template-columns:.75fr 1.25fr;align-items:center;gap:20px;padding-bottom:28px}.stay-copy .script-pink{font-family:Parisienne,cursive;color:var(--pink);font-size:48px;margin:0}.stay-copy h2{font-family:'DM Serif Display',serif;font-size:clamp(46px,6vw,82px);line-height:.88;margin:0;color:#111}.stay-copy h2 em{font-family:Parisienne,cursive;font-weight:400;display:block;font-size:1.08em}.stay-copy p{font-size:17px;line-height:1.65;max-width:520px}.luggage-scene img{width:100%;max-height:540px;object-fit:cover;object-position:50% 16%;border-radius:34px;box-shadow:0 20px 55px rgba(48,25,22,.16)}.stay-heading{margin-top:12px}.stay-heading h2{font-family:Parisienne,cursive;color:var(--pink);font-size:50px}.section-wrap.compact{padding-top:20px;padding-bottom:28px}.stay-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.stay-card{position:relative;background:rgba(255,255,255,.82);border:1px solid #ead4cf;border-radius:18px;padding:30px 22px 22px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.05);transition:.22s}.stay-card:hover{transform:translateY(-6px);box-shadow:0 16px 35px rgba(0,0,0,.11)}.stay-card h3{font-family:Parisienne,cursive;font-size:34px;margin:0 0 4px}.stay-card b{font-size:10px;letter-spacing:.18em}.stay-card p{font-size:13px;line-height:1.5;min-height:78px}.stay-card>span:last-child{display:inline-block;border:1px solid var(--pink);color:var(--pink);padding:9px 18px;font-size:11px;font-weight:700}.stay-card.top-pick{border:2px solid var(--pink)}.ribbon{position:absolute;left:12px;top:-13px;background:var(--pink);color:#fff;padding:7px 14px;font-size:10px;font-weight:700;letter-spacing:.08em}.stay-cheek{text-align:center;font-family:Parisienne,cursive;color:var(--pink);font-size:42px;margin:4px 0 0}.moved-art{max-width:900px}.moved-art img{width:100%;border-radius:34px;box-shadow:0 18px 50px rgba(25,52,42,.15)}
+.champagne-section{background:radial-gradient(circle at 60% 35%,#3b3022 0,#171612 35%,#080909 72%);color:white;overflow:hidden}.champagne-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:28px;align-items:center;min-height:650px}.champagne-copy h2{font-family:Parisienne,cursive;color:#f14c78;font-size:62px;line-height:.9;margin:8px 0 18px}.champagne-copy p{line-height:1.65;max-width:420px}.champagne-cheek{font-family:Parisienne,cursive!important;color:#f14c78;font-size:38px!important;line-height:1!important;margin-top:36px!important}.tower-wrap{position:relative;min-height:560px;display:flex;align-items:flex-end;justify-content:center}.pour-bottle{position:absolute;width:340px;left:-25px;top:0;transform:rotate(8deg);border-radius:30px;mix-blend-mode:screen;opacity:.9}.champagne-tower{position:relative;z-index:2;width:min(720px,100%);display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(4,125px);align-items:end;justify-items:center;padding-top:70px}.coupe{width:150px;height:102px;position:relative;display:flex;align-items:flex-start;justify-content:center;text-align:center;padding:20px 18px 0;color:#16130e;font-family:'DM Serif Display',serif;font-size:16px;line-height:1.05;filter:drop-shadow(0 6px 9px rgba(0,0,0,.4));transition:.2s}.coupe:before{content:"";position:absolute;inset:0 8px 42px;border:3px solid #f4d18b;border-top-width:5px;border-radius:10px 10px 60px 60px;background:linear-gradient(#fff7c9 0%,#e7b948 70%,#bd7b19 100%);z-index:-1;box-shadow:inset 0 0 18px rgba(255,255,255,.65),0 0 16px rgba(235,187,78,.35)}.coupe:after{content:"";position:absolute;left:50%;top:59px;width:3px;height:39px;background:#f4d18b;box-shadow:-30px 39px 0 0 transparent;transform:translateX(-50%)}.coupe .base{position:absolute;width:70px;height:3px;background:#f4d18b;bottom:1px;left:50%;transform:translateX(-50%);border-radius:50%}.coupe:hover{transform:translateY(-7px) scale(1.05);color:var(--pink)}.coupe:nth-child(1){grid-column:4/6;grid-row:1}.coupe:nth-child(2){grid-column:3/5;grid-row:2}.coupe:nth-child(3){grid-column:4/6;grid-row:2}.coupe:nth-child(4){grid-column:5/7;grid-row:2}.coupe:nth-child(5){grid-column:2/4;grid-row:3}.coupe:nth-child(6){grid-column:3/5;grid-row:3}.coupe:nth-child(7){grid-column:5/7;grid-row:3}.coupe:nth-child(8){grid-column:6/8;grid-row:3}
+@media(max-width:900px){.stay-hero,.champagne-layout{grid-template-columns:1fr}.stay-grid{grid-template-columns:repeat(2,1fr)}.tower-wrap{min-height:530px}.pour-bottle{width:270px}.champagne-copy{text-align:center}.champagne-copy p{margin-left:auto;margin-right:auto}}
+@media(max-width:560px){.stay-grid{grid-template-columns:1fr}.stay-copy{text-align:center}.stay-copy .script-pink{font-size:40px}.stay-cheek{font-size:34px}.champagne-layout{padding-left:2vw;padding-right:2vw}.champagne-copy h2{font-size:50px}.tower-wrap{transform:scale(.68);transform-origin:top center;width:145%;margin-left:-22%;min-height:470px}.pour-bottle{left:20px}}
 
-.photo-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55) saturate(.9)}
-.photo-hero .hero-monogram,.photo-hero .script,.photo-hero .hero-kicker{z-index:2}
-.section-photo-strip{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin:-20px 0 55px}
-.section-photo-strip img{width:100%;height:320px;object-fit:cover;filter:saturate(.82) contrast(.94)}
-.drink-visual{display:grid;grid-template-columns:.7fr 1.3fr;align-items:stretch;margin:-30px 0 65px;border:1px solid #302929;background:#0b0b0b}
-.drink-visual img{width:100%;height:440px;object-fit:cover;filter:saturate(.9) brightness(.82)}
-.drink-visual div{padding:65px;display:flex;flex-direction:column;justify-content:center}
-.drink-visual span{font-size:10px;letter-spacing:2px;color:var(--rose)}
-.drink-visual strong{font:500 clamp(44px,6vw,78px)/.9 'Cormorant Garamond';margin:18px 0;color:#f4efe7}
-.drink-visual small{letter-spacing:2px;color:#a9928d}
-.night-collage{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:1fr 1fr;gap:12px}
-.night-collage img{width:100%;height:100%;object-fit:cover;filter:saturate(.75) brightness(.78)}
-.night-collage img:first-child{grid-row:1/3;min-height:520px}
-.photo-collage{overflow:hidden}
-.photo-collage>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.58) saturate(.8)}
-.photo-collage span,.photo-collage b,.photo-collage i,.photo-collage small{z-index:2}
-@media(max-width:900px){.section-photo-strip,.drink-visual,.night-collage{grid-template-columns:1fr}.section-photo-strip img{height:240px}.drink-visual img{height:320px}.drink-visual div{padding:35px}.night-collage{grid-template-rows:auto}.night-collage img:first-child{grid-row:auto;min-height:320px}.night-collage img{height:240px}}
+/* v3 correction pass: accurate Maison photo + maximalist pop hero + animated champagne cascade */
+.luggage-scene img{width:100%;max-height:560px;aspect-ratio:16/8;object-fit:cover;object-position:center;border-radius:34px;box-shadow:0 24px 70px rgba(43,18,34,.22);filter:saturate(1.12) contrast(1.03)}
+.stay-card{padding:14px 14px 22px;overflow:visible}
+.stay-card-photo{width:100%;height:220px;display:block;object-fit:cover;border-radius:12px;margin-bottom:14px;box-shadow:0 6px 18px rgba(20,20,20,.09)}
+.stay-card.top-pick .stay-card-photo{object-position:center 46%}
+.stay-card h3{margin-top:4px}
+.ribbon{z-index:5;top:-12px;left:10px}
 
+.champagne-section{background:radial-gradient(circle at 70% 12%,#ff6aab 0,#e31674 33%,#8b0a4d 70%,#2c061e 100%);position:relative}
+.champagne-layout{grid-template-columns:.62fr 1.38fr;min-height:780px}
+.champagne-copy h2{font-size:68px;color:#ffd564;text-shadow:0 2px 0 rgba(255,255,255,.2)}
+.champagne-cheek{color:#ffd564!important}
+.animated-tower{position:relative;min-height:700px;display:block;isolation:isolate}
+.tower-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:34px;box-shadow:0 24px 70px rgba(0,0,0,.32);z-index:1}
+.champagne-flow{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none;overflow:visible}
+.flow{fill:none;stroke:#ffd765;stroke-width:15;stroke-linecap:round;filter:url(#goldGlow);stroke-dasharray:20 19;animation:champagnePour 1.05s linear infinite;opacity:.94}
+.cascade{stroke-width:11;animation-duration:1.38s;opacity:.83}
+.stream-b{animation-delay:-.42s}.c2{animation-delay:-.3s}.c3{animation-delay:-.65s}.c4{animation-delay:-.95s}
+.bubble{fill:#fff2a9;filter:url(#goldGlow);animation:bubbleRise 1.75s ease-in infinite}.b2{animation-delay:-.5s}.b3{animation-delay:-1s}.b4{animation-delay:-1.35s}
+@keyframes champagnePour{to{stroke-dashoffset:-78}}
+@keyframes bubbleRise{0%{opacity:0;transform:translateY(14px) scale(.5)}35%{opacity:1}100%{opacity:0;transform:translateY(-38px) scale(1.25)}}
+.glass-links{position:absolute;inset:0;z-index:4}
+.glass-link{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;color:#bf145e;background:rgba(255,250,223,.15);border:1px solid rgba(255,235,166,.22);border-radius:50%;font-family:'DM Serif Display',serif;font-size:clamp(11px,1.12vw,16px);font-weight:700;line-height:1.05;text-decoration:none;text-shadow:0 1px 0 rgba(255,255,255,.75);transition:.22s;backdrop-filter:blur(.4px)}
+.glass-link:hover,.glass-link:focus-visible{background:rgba(255,247,188,.42);transform:translateY(-7px) scale(1.05);box-shadow:0 0 30px rgba(255,213,100,.68);outline:2px solid #ffd564;outline-offset:2px}
+/* clickable coupe hit areas align to the art */
+.g1{left:39%;top:18%;width:22%;height:17%}
+.g2{left:25%;top:36%;width:22%;height:16%}
+.g3{left:55%;top:36%;width:20%;height:16%}
+.g4{left:16%;top:55%;width:24%;height:17%}
+.g5{left:40%;top:56%;width:21%;height:16%}
+.g6{left:64%;top:56%;width:20%;height:16%}
+.g7{left:29%;top:75%;width:22%;height:17%}
+.g8{left:54%;top:75%;width:21%;height:17%}
+.g9{left:7%;top:77%;width:15%;height:15%;border-radius:24%}
+@media(max-width:900px){.champagne-layout{grid-template-columns:1fr;min-height:0}.animated-tower{min-height:680px}.stay-card-photo{height:240px}.luggage-scene img{aspect-ratio:4/3}}
+@media(max-width:560px){.animated-tower{min-height:530px;transform:none;width:100%;margin:0}.champagne-copy h2{font-size:54px}.glass-link{font-size:10px}.stay-card-photo{height:260px}.luggage-scene img{aspect-ratio:1/1}}
+@media(prefers-reduced-motion:reduce){.flow,.bubble{animation:none}}
+.card{color:inherit;text-decoration:none}.card:focus-visible{outline:2px solid var(--pink);outline-offset:4px}.card:hover h3{color:var(--pink)}
 
-/* Editorial campaign tagline */
-.hero-tagline{
-  position:absolute;
-  left:6.5%;
-  top:11%;
-  z-index:3;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  max-width:min(620px,82%);
-  pointer-events:none;
-  text-shadow:0 2px 18px rgba(0,0,0,.35);
-}
-.tagline-good{
-  font-family:"Cormorant Garamond",serif;
-  font-size:clamp(25px,3.1vw,49px);
-  line-height:1.02;
-  font-weight:400;
-  letter-spacing:.01em;
-  color:#f3ede5;
-}
-.tagline-great{
-  margin-top:2px;
-  font-family:"Allura",cursive;
-  font-size:clamp(46px,6.1vw,94px);
-  line-height:.9;
-  color:#cf7279;
-  white-space:nowrap;
-}
-@media(max-width:900px){
-  .hero-tagline{
-    left:7%;
-    top:9%;
-    max-width:88%;
-  }
-  .tagline-great{
-    white-space:normal;
-  }
-}
+/* v4: reference-led luxury pop-art hero + seamless animated champagne pour */
+.pop-art-hero{display:block!important;max-width:1180px;padding-top:64px;padding-bottom:26px}
+.pop-art-hero .luggage-scene{width:100%}
+.pop-art-hero .luggage-scene img{width:100%;max-height:none;aspect-ratio:auto;object-fit:contain;object-position:center;border-radius:30px;box-shadow:0 24px 70px rgba(43,18,34,.17);filter:none}
 
+.champagne-section{background:#f7efe7;color:#28211c}
+.champagne-layout{grid-template-columns:.62fr 1.38fr;gap:42px;min-height:900px;align-items:center}
+.champagne-copy h2{color:#d91f62;text-shadow:none}
+.champagne-copy p{color:#3d332e}
+.champagne-cheek{color:#d91f62!important}
+.animated-tower{min-height:820px;aspect-ratio:653/1024;margin:36px auto;max-width:653px;width:100%}
+.tower-art{object-fit:contain;object-position:center;background:#f8f1e8;border-radius:28px}
+.champagne-flow{z-index:4}
+.stream-body{fill:none;stroke:#f2b42d;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;opacity:.72;filter:url(#goldGlowV4)}
+.stream-body.overflow{stroke-width:9;opacity:.62}
+.stream-shimmer{fill:none;stroke:rgba(255,255,255,.92);stroke-width:3.4;stroke-linecap:round;stroke-dasharray:3 16;animation:liquidTravel .62s linear infinite;filter:url(#goldGlowV4)}
+.stream-shimmer.overflow{stroke-width:2.5;stroke-dasharray:2 13;animation-duration:.76s}
+.moving-drops circle{fill:#ffd45f;stroke:#fff5c0;stroke-width:1.5}
+.bubbles circle{fill:rgba(255,247,191,.94);stroke:rgba(255,255,255,.95);stroke-width:1.2;transform-box:fill-box;transform-origin:center;animation:bubbleRise 1.7s ease-in infinite}
+.bubbles circle:nth-child(2n){animation-delay:-.55s;animation-duration:1.35s}.bubbles circle:nth-child(3n){animation-delay:-.95s;animation-duration:1.95s}
+@keyframes liquidTravel{to{stroke-dashoffset:-38}}
+@keyframes bubbleRise{0%{transform:translateY(18px) scale(.55);opacity:0}25%{opacity:1}100%{transform:translateY(-34px) scale(1.1);opacity:0}}
 
-/* Selected restaurant photography — official restaurant-site imagery */
-.cards article.restaurant-photo-card{
-  position:relative;
-  overflow:hidden;
-  min-height:320px;
-  padding:34px 28px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  color:#fff7ef;
-  border-top:0;
-  background:#171313;
-}
-.cards article.restaurant-photo-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image:
-    linear-gradient(180deg,rgba(6,6,6,.13) 0%,rgba(8,7,7,.30) 35%,rgba(8,7,7,.92) 100%),
-    var(--restaurant-photo);
-  background-size:cover;
-  background-position:center;
-  transform:scale(1.015);
-  transition:transform .45s ease,filter .45s ease;
-  z-index:0;
-}
-.cards article.restaurant-photo-card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  border:1px solid rgba(255,255,255,.12);
-  pointer-events:none;
-}
-.cards article.restaurant-photo-card:hover::before{
-  transform:scale(1.055);
-  filter:saturate(1.08);
-}
-.cards article.restaurant-photo-card > *{
-  position:relative;
-  z-index:1;
-}
-.cards article.restaurant-photo-card > span{
-  color:#e59aa0;
-}
-.cards article.restaurant-photo-card h3{
-  font-size:39px;
-  margin:12px 0 6px;
-}
-.cards article.restaurant-photo-card h3 a{
-  color:#fff7ef;
-}
-.cards article.restaurant-photo-card h3 a:hover{
-  color:#f0a2a8;
-}
-.cards article.restaurant-photo-card p{
-  color:#e8dfd6;
-  margin-bottom:0;
-  max-width:92%;
-}
+.glass-links{position:absolute;inset:0;z-index:6;pointer-events:none}
+.glass-link{position:absolute;display:block;background:transparent!important;border:0!important;color:transparent!important;font-size:0!important;text-indent:-9999px;overflow:hidden;border-radius:48% 48% 42% 42%;pointer-events:auto;transition:box-shadow .2s ease,transform .2s ease}
+.glass-link:hover,.glass-link:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(217,31,98,.72),0 0 28px rgba(244,178,55,.65);transform:scale(1.025)}
+.g1{left:35.2%;top:23.2%;width:29.8%;height:13.5%}
+.g2{left:20.1%;top:38.5%;width:25.6%;height:13.8%}
+.g3{left:54.2%;top:38.5%;width:25.7%;height:13.8%}
+.g4{left:7.8%;top:53.5%;width:25.5%;height:13.6%}
+.g5{left:37.2%;top:53.5%;width:25.6%;height:13.6%}
+.g6{left:67.0%;top:53.5%;width:25.4%;height:13.6%}
+.g7{left:20.2%;top:68.3%;width:25.6%;height:13.6%}
+.g8{left:54.0%;top:68.3%;width:25.5%;height:13.6%}
+.g9{left:5.5%;top:73.0%;width:15.5%;height:14.5%;border-radius:24%}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 
-/* After Dark image: no watercolor treatment */
-#dark img{
-  filter:saturate(.82) brightness(.78) contrast(1.04);
-  border:1px solid rgba(0,0,0,.12);
-}
+@media(max-width:900px){.champagne-layout{grid-template-columns:1fr;min-height:0}.animated-tower{min-height:0;max-width:620px}.pop-art-hero{padding-top:38px}}
+@media(max-width:560px){.animated-tower{width:100%;aspect-ratio:653/1024;min-height:0}.champagne-copy{text-align:center}.pop-art-hero{padding-left:14px;padding-right:14px}.pop-art-hero .luggage-scene img{border-radius:20px}}
 
+/* Restaurant art gallery — each recommendation is an original clickable painting */
+#restaurantCards.restaurant-art-grid,
+#restaurantCards{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:start}
+.restaurant-painting{display:block;background:#fffaf3;border:1px solid #dfc7b5;border-radius:10px;padding:10px 10px 16px;box-shadow:0 8px 22px rgba(48,31,22,.08);transition:transform .22s ease,box-shadow .22s ease;position:relative;overflow:hidden}
+.restaurant-painting::after{content:'VIEW RESTAURANT ↗';position:absolute;right:14px;top:14px;background:rgba(255,250,243,.92);color:var(--pink);font-size:9px;font-weight:800;letter-spacing:.11em;padding:7px 9px;border-radius:999px;opacity:0;transform:translateY(-5px);transition:.2s}
+.restaurant-painting:hover{transform:translateY(-7px) rotate(-.25deg);box-shadow:0 18px 42px rgba(48,31,22,.16)}
+.restaurant-painting:hover::after{opacity:1;transform:translateY(0)}
+.painting-frame{background:#17120f;border:4px solid #18120f;border-radius:5px;overflow:hidden;aspect-ratio:4/3;box-shadow:inset 0 0 0 2px #b89254,0 4px 12px rgba(0,0,0,.15)}
+.painting-frame img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease,filter .35s ease}
+.restaurant-painting:hover .painting-frame img{transform:scale(1.035);filter:saturate(1.06) contrast(1.02)}
+.painting-caption{padding:14px 8px 0;text-align:left}
+.painting-caption h3{font-family:'DM Serif Display',serif;font-size:22px;margin:0 0 6px;color:var(--emerald);line-height:1.05}
+.painting-caption p{font-size:13px;line-height:1.45;margin:0 0 12px;color:#302b27}
+.painting-caption span{font-size:10px;color:var(--pink);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:900px){#restaurantCards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){#restaurantCards{grid-template-columns:1fr}.restaurant-painting{max-width:430px;width:100%;margin-inline:auto}.painting-caption h3{font-size:25px}}
 
-/* V6: selective image-card rhythm */
-.cards article.restaurant-photo-card:nth-child(4n+1)::before{
-  background-position:center 35%;
-}
-.cards article.restaurant-photo-card:nth-child(4n+3)::before{
-  background-position:center 55%;
-}
-.cards article.restaurant-photo-card:nth-child(even){
-  min-height:300px;
-}
-.cards article.restaurant-photo-card:nth-child(odd){
-  min-height:340px;
-}
+/* v6: painterly liquid-flow pass — broad translucent ribbons taper and break into highlights/drops */
+.liquid-ribbon{fill:rgba(236,171,37,.58);stroke:rgba(255,222,128,.72);stroke-width:1.4;filter:url(#goldGlowV4);mix-blend-mode:screen;animation:liquidPulse 1.15s ease-in-out infinite alternate}
+.liquid-ribbon.primary{fill:rgba(239,178,45,.70);stroke:rgba(255,238,165,.88)}
+.liquid-ribbon.overflow{fill:rgba(226,153,23,.48);stroke:rgba(255,225,128,.62)}
+.liquid-ribbon.thin{fill:rgba(230,160,29,.42)}
+.stream-shimmer.painterly{stroke:rgba(255,255,234,.95);stroke-width:3.2;stroke-dasharray:1 11;stroke-linecap:round;animation:liquidTravel .46s linear infinite}
+.stream-shimmer.painterly.overflow{stroke-width:2.2;stroke-dasharray:1 9;animation-duration:.58s}
+.artistic-drops circle{fill:rgba(255,236,157,.95);stroke:white;stroke-width:.8}
+@keyframes liquidPulse{from{opacity:.72}to{opacity:.98}}
 
-
-/* V7 — glossy black editorial system */
-body{
-  background:
-    radial-gradient(circle at 50% -20%, rgba(255,255,255,.055), transparent 27%),
-    linear-gradient(180deg,#050505 0%,#0a0a0a 46%,#040404 100%);
-}
-header{
-  background:linear-gradient(180deg,rgba(18,18,18,.985),rgba(4,4,4,.985));
-  border-bottom:1px solid rgba(255,255,255,.16);
-  box-shadow:0 10px 30px rgba(0,0,0,.48), inset 0 1px rgba(255,255,255,.06);
-}
-.logo strong{
-  text-shadow:0 1px 0 #fff,0 0 18px rgba(255,255,255,.08);
-}
-.shortlist,.dark,.stay,.cream,.weekend,.split.reverse{
-  background:
-    linear-gradient(120deg,rgba(255,255,255,.025),transparent 24%),
-    linear-gradient(180deg,#0b0b0b,#050505);
-  color:#f6f0e8;
-}
-.stay,.cream{
-  border-top:1px solid rgba(255,255,255,.1);
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-.hotel-grid{
-  background:rgba(255,255,255,.09);
-  gap:1px;
-}
-.hotel-grid article,.cards article{
-  background:
-    linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.012) 40%,rgba(255,255,255,.025));
-  color:#eee6dd;
-  border-color:rgba(255,255,255,.16);
-  box-shadow:inset 0 1px rgba(255,255,255,.055);
-}
-.hotel-grid p,.cards p,.section-title p,.funnel p{
-  color:#bdb5ad;
-}
-.hotel-grid h3 a,.cards h3 a{
-  color:#f7f0e7;
-}
-.funnel{
-  border-top:1px solid rgba(255,255,255,.13);
-  margin-top:30px;
-}
-.shortlist>a{
-  background:
-    linear-gradient(135deg,rgba(255,255,255,.07),rgba(255,255,255,.015) 35%,rgba(255,255,255,.04)),
-    #080808;
-  box-shadow:inset 0 1px rgba(255,255,255,.1),0 10px 30px rgba(0,0,0,.22);
-}
-.drink-grid a{
-  background:linear-gradient(145deg,rgba(255,255,255,.025),rgba(255,255,255,.005));
-}
-.drink-grid a:hover{
-  background:linear-gradient(145deg,rgba(207,114,121,.12),rgba(255,255,255,.025));
-}
-.venue-links a{color:#efe6dc;border-color:rgba(255,255,255,.15)}
-.venue-links a:hover{color:#f58b96}
-#dark{background:linear-gradient(135deg,#090909,#111 55%,#060606)}
-#dark img{
-  border:1px solid rgba(255,255,255,.14);
-  box-shadow:0 22px 60px rgba(0,0,0,.45);
-}
-
-/* Hero tagline: prevent clipping and make NOLA behave like real neon */
-.hero-tagline{
-  max-width:90%;
-  right:4%;
-}
-.tagline-great{
-  white-space:normal !important;
-  width:100%;
-  font-size:clamp(44px,5.3vw,84px);
-  overflow:visible;
-}
-.neon-nola{
-  display:inline-block;
-  color:#ff8190;
-  text-shadow:
-    0 0 2px #fff,
-    0 0 7px #ff9ca6,
-    0 0 16px #ff6678,
-    0 0 30px #ff3d58,
-    0 0 54px rgba(255,61,88,.72);
-  animation:nola-neon-flicker 7s infinite;
-}
-@keyframes nola-neon-flicker{
-  0%,18%,22%,25%,53%,57%,100%{opacity:1;filter:brightness(1.1)}
-  19%{opacity:.58;filter:brightness(.62)}
-  20%{opacity:.93}
-  23%{opacity:.38;filter:brightness(.55)}
-  24%{opacity:.88}
-  54%{opacity:.7}
-  55%{opacity:.32;filter:brightness(.45)}
-  56%{opacity:.95}
-}
-@media(prefers-reduced-motion:reduce){
-  .neon-nola{animation:none}
-}
-
-/* New Orleans visual ribbon */
-.night-ribbon{
-  display:grid;
-  grid-template-columns:1.05fr .8fr .85fr 1.05fr 1.15fr;
-  gap:8px;
-  padding:12px 3vw 65px;
-  background:#050505;
-}
-.night-ribbon figure{
-  margin:0;
-  height:260px;
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,.13);
-  box-shadow:inset 0 0 25px rgba(255,255,255,.025);
-}
-.night-ribbon img{
-  width:100%;height:100%;object-fit:cover;
-  filter:saturate(.84) contrast(1.04) brightness(.78);
-  transition:transform .45s ease,filter .45s ease;
-}
-.night-ribbon figure:hover img{
-  transform:scale(1.04);
-  filter:saturate(1) contrast(1.04) brightness(.88);
-}
-
-/* Cocktail collage */
-.drink-collage{
-  display:grid;
-  grid-template-columns:1.2fr .8fr .8fr 1fr;
-  gap:10px;
-  margin:0 0 34px;
-}
-.drink-collage img{
-  width:100%;
-  height:290px;
-  object-fit:cover;
-  border:1px solid rgba(255,255,255,.12);
-  filter:saturate(.88) brightness(.76);
-}
-.drink-collage img:nth-child(2){height:340px;margin-top:-34px}
-
-/* Reglr feature */
-.reglr-feature{
-  padding:72px 6vw;
-  background:
-    radial-gradient(circle at 77% 48%,rgba(207,114,121,.13),transparent 28%),
-    linear-gradient(145deg,#060606,#111 55%,#030303);
-  border-top:1px solid rgba(255,255,255,.12);
-  border-bottom:1px solid rgba(255,255,255,.12);
-}
-.reglr-kicker{font-size:10px;letter-spacing:3px;color:#cf7279;margin-bottom:26px}
-.reglr-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:8vw;align-items:center}
-.reglr-grid h2{font:500 clamp(52px,6vw,88px)/.86 "Cormorant Garamond";margin:0 0 20px}
-.reglr-grid h2 i{font-family:"Allura";font-weight:400;color:#e9828c}
-.reglr-grid p{max-width:590px;line-height:1.8;color:#bdb5ad}
-.reglr-card{
-  min-height:370px;
-  padding:45px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  border:1px solid rgba(255,255,255,.17);
-  background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.01) 45%,rgba(207,114,121,.055));
-  box-shadow:inset 0 1px rgba(255,255,255,.13),0 25px 70px rgba(0,0,0,.42);
-}
-.reglr-card span,.reglr-card small{letter-spacing:3px;color:#a99a92}
-.reglr-card strong{font:500 clamp(66px,8vw,120px)/.9 "Cormorant Garamond";letter-spacing:5px;margin:28px 0;color:#fff}
-.reglr-card a{color:#e9828c;text-decoration:none;margin-top:35px;font-size:11px;letter-spacing:2px}
-.neon-button{
-  background:#080808;border:1px solid #cf7279;color:#ffabb2;
-  box-shadow:0 0 18px rgba(207,114,121,.12),inset 0 1px rgba(255,255,255,.06)
-}
-
-@media(max-width:900px){
-  .night-ribbon{grid-template-columns:1fr 1fr}
-  .night-ribbon figure{height:220px}
-  .drink-collage{grid-template-columns:1fr 1fr}
-  .drink-collage img,.drink-collage img:nth-child(2){height:230px;margin-top:0}
-  .reglr-grid{grid-template-columns:1fr}
-}
-
-
-/* V8 — refined Reglr editorial note */
-.reglr-feature{display:none!important}
-.reglr-note{
-  max-width:1180px;
-  margin:34px auto 74px;
-  padding:28px 36px 32px;
-  display:grid;
-  grid-template-columns:190px 1fr;
-  gap:42px;
-  align-items:start;
-  background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
-  border-top:1px solid rgba(255,255,255,.15);
-  border-bottom:1px solid rgba(255,255,255,.11);
-  box-shadow:inset 0 1px rgba(255,255,255,.035);
-}
-.reglr-note-label{
-  padding-top:8px;
-  color:#df7d87;
-  font-size:9px;
-  letter-spacing:2.6px;
-  line-height:1.6;
-}
-.reglr-note-copy{max-width:760px}
-.reglr-note h2{
-  margin:0 0 8px;
-  color:#f6eee6;
-  font:500 clamp(30px,3.3vw,48px)/1 "Cormorant Garamond";
-}
-.reglr-note h2 i{
-  color:#ed8993;
-  font-family:"Allura";
-  font-size:1.25em;
-  font-weight:400;
-}
-.reglr-note p{
-  margin:0 0 17px;
-  color:#aaa19a;
-  font-size:13px;
-  line-height:1.75;
-}
-.reglr-note a{
-  color:#e98b94;
-  text-decoration:none;
-  font-size:9px;
-  letter-spacing:2px;
-}
-.reglr-note a:hover{color:#ffb1b8}
-
-/* Crop correction: preserve subject rather than over-zooming imagery */
-.drink-collage img{
-  object-fit:cover;
-  object-position:center center;
-}
-.drink-collage img:nth-child(2){
-  object-position:center 42%;
-}
-.night-ribbon img{
-  object-position:center center;
-}
-.restaurant-photo-card::before{
-  background-size:cover;
-  background-position:center center;
-}
-
-@media(max-width:760px){
-  .reglr-note{
-    margin:20px 18px 55px;
-    padding:24px;
-    grid-template-columns:1fr;
-    gap:14px;
-  }
-}
-
-/* V9 — luxe photography pass: compositions are intentionally preserved */
-.drink-collage img{object-position:center!important}
-.drink-collage img:nth-child(1){object-position:center 45%!important}
-.drink-collage img:nth-child(2){object-position:center 58%!important}
-.drink-collage img:nth-child(3){object-position:center 50%!important}
-.drink-collage img:nth-child(4){object-position:center 50%!important}
-.section-photo-strip img{object-position:center center!important}
-
-
-/* V10 — requested drink imagery */
-#drink .drink-collage img:nth-child(1){
-  object-position:center center !important;
-  object-fit:cover;
-}
-#drink .drink-collage img:nth-child(2){
-  object-position:center center !important;
-  object-fit:contain;
-  background:#071d37;
-}
-
-
-/* V12 — rectangular drink gallery refresh */
-#drink .drink-collage{
-  display:grid;
-  grid-template-columns:1.15fr .8fr 1fr 1fr 1.05fr;
-  gap:10px;
-  align-items:stretch;
-  margin:0 0 36px;
-}
-#drink .drink-collage img{
-  width:100%;
-  height:300px;
-  object-fit:cover;
-  object-position:center;
-  border-radius:0 !important;
-  border:1px solid rgba(255,255,255,.13);
-  filter:saturate(.9) brightness(.8) contrast(1.02);
-}
-#drink .drink-collage img:nth-child(2){
-  object-fit:contain;
-  background:#071d37;
-}
-#drink .drink-collage img:nth-child(3){
-  object-position:center 42%;
-}
-#drink .drink-collage img:nth-child(4){
-  object-position:center 45%;
-}
-@media(max-width:900px){
-  #drink .drink-collage{grid-template-columns:1fr 1fr}
-  #drink .drink-collage img{height:235px}
-}
-
-
-/* V13 — drink gallery alignment correction
-   All five drink images sit on the same visual plane with identical frames. */
-#drink .drink-collage{
-  display:grid !important;
-  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
-  gap:10px !important;
-  align-items:stretch !important;
-  justify-items:stretch !important;
-  margin:0 0 36px !important;
-}
-
-#drink .drink-collage img,
-#drink .drink-collage img:nth-child(1),
-#drink .drink-collage img:nth-child(2),
-#drink .drink-collage img:nth-child(3),
-#drink .drink-collage img:nth-child(4),
-#drink .drink-collage img:nth-child(5){
-  display:block !important;
-  width:100% !important;
-  height:320px !important;
-  min-height:320px !important;
-  max-height:320px !important;
-  margin:0 !important;
-  padding:0 !important;
-  align-self:stretch !important;
-  object-fit:cover !important;
-  object-position:center center !important;
-  border-radius:0 !important;
-  border:1px solid rgba(255,255,255,.13) !important;
-  background:#090909 !important;
-  box-sizing:border-box !important;
-  filter:saturate(.9) brightness(.8) contrast(1.02);
-}
-
-/* Keep the tall blue-background cocktail centered without creating a different-height card. */
-#drink .drink-collage img:nth-child(2){
-  object-fit:cover !important;
-  object-position:center 50% !important;
-}
-
-/* Fine-tuned subject centering for the other supplied images. */
-#drink .drink-collage img:nth-child(3){
-  object-position:center 46% !important;
-}
-#drink .drink-collage img:nth-child(4){
-  object-position:center 48% !important;
-}
-#drink .drink-collage img:nth-child(5){
-  object-position:center 50% !important;
-}
-
-@media(max-width:1100px){
-  #drink .drink-collage{
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-  }
-}
-@media(max-width:760px){
-  #drink .drink-collage{
-    grid-template-columns:1fr 1fr !important;
-  }
-  #drink .drink-collage img,
-  #drink .drink-collage img:nth-child(n){
-    height:240px !important;
-    min-height:240px !important;
-    max-height:240px !important;
-  }
-}
-
-
-/* V14 — final professional polish */
-
-/* Keep the Drink section disciplined inside the desktop viewport. */
-#drink{
-  padding-top:58px !important;
-  padding-bottom:72px !important;
-  overflow:hidden;
-}
-#drink > .section-title,
-#drink > .drink-collage,
-#drink > .drink-grid{
-  width:min(1320px,100%) !important;
-  margin-left:auto !important;
-  margin-right:auto !important;
-}
-#drink > .section-title{
-  margin-bottom:30px !important;
-}
-
-/* Five photographs read as one editorial strip — identical geometry. */
-#drink .drink-collage{
-  display:grid !important;
-  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
-  grid-auto-rows:300px !important;
-  gap:12px !important;
-  align-items:stretch !important;
-  margin-top:0 !important;
-  margin-bottom:42px !important;
-}
-#drink .drink-collage img,
-#drink .drink-collage img:nth-child(n){
-  display:block !important;
-  width:100% !important;
-  height:300px !important;
-  min-width:0 !important;
-  min-height:0 !important;
-  max-height:none !important;
-  margin:0 !important;
-  padding:0 !important;
-  object-fit:cover !important;
-  object-position:center center !important;
-  border:1px solid rgba(255,255,255,.12) !important;
-  border-radius:0 !important;
-  box-sizing:border-box !important;
-  background:#090909 !important;
-  filter:saturate(.92) brightness(.80) contrast(1.035) !important;
-  box-shadow:0 14px 34px rgba(0,0,0,.20);
-}
-
-/* Subject-specific crop tuning while keeping every frame the same size. */
-#drink .drink-collage img:nth-child(1){object-position:center 51% !important;}
-#drink .drink-collage img:nth-child(2){object-position:center 50% !important;}
-#drink .drink-collage img:nth-child(3){object-position:center 50% !important;}
-#drink .drink-collage img:nth-child(4){object-position:center 46% !important;}
-#drink .drink-collage img:nth-child(5){object-position:center 48% !important;}
-
-/* Venue links become a separate, clearly organized editorial index rather
-   than appearing as captions for individual photographs. */
-#drink .drink-grid{
-  display:grid !important;
-  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-  border-top:1px solid rgba(255,255,255,.18) !important;
-  column-gap:0 !important;
-}
-#drink .drink-grid a{
-  min-width:0;
-  min-height:104px;
-  padding:25px 24px !important;
-  border-right:1px solid rgba(255,255,255,.08);
-  border-bottom:1px solid rgba(255,255,255,.14) !important;
-  justify-content:center;
-}
-#drink .drink-grid a:nth-child(3n){border-right:0;}
-#drink .drink-grid b{
-  line-height:1.05;
-}
-
-/* Prevent horizontal clipping throughout the site at common laptop widths. */
-html,body{
-  max-width:100%;
-  overflow-x:hidden;
-}
-main,section{
-  min-width:0;
-}
-header{
-  max-width:100vw;
-}
-header nav{
-  min-width:0;
-}
-header nav a{
-  white-space:nowrap;
-}
-
-/* Reduce accidental-looking dead space between major editorial sections. */
-.dark + .cream,
-.cream + .dark,
-.night-ribbon + .dark{
-  margin-top:0 !important;
-}
-
-/* Laptop breakpoint: keep the gallery cohesive instead of allowing it to
-   run offscreen. */
-@media(max-width:1180px){
-  #drink{
-    padding-left:4vw !important;
-    padding-right:4vw !important;
-  }
-  #drink .drink-collage{
-    grid-template-columns:repeat(5,minmax(0,1fr)) !important;
-    grid-auto-rows:260px !important;
-    gap:8px !important;
-  }
-  #drink .drink-collage img,
-  #drink .drink-collage img:nth-child(n){
-    height:260px !important;
-  }
-  #drink .drink-grid{
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-  }
-}
-
-/* Tablet/mobile: preserve hierarchy without awkward half-crops. */
-@media(max-width:820px){
-  #drink .drink-collage{
-    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-    grid-auto-rows:240px !important;
-  }
-  #drink .drink-collage img,
-  #drink .drink-collage img:nth-child(n){
-    height:240px !important;
-  }
-  #drink .drink-grid{
-    grid-template-columns:1fr 1fr !important;
-  }
-  #drink .drink-grid a:nth-child(3n){border-right:1px solid rgba(255,255,255,.08);}
-  #drink .drink-grid a:nth-child(2n){border-right:0;}
-}
-@media(max-width:560px){
-  #drink{
-    padding-top:42px !important;
-  }
-  #drink .drink-collage{
-    grid-template-columns:1fr !important;
-    grid-auto-rows:300px !important;
-    gap:10px !important;
-  }
-  #drink .drink-collage img,
-  #drink .drink-collage img:nth-child(n){
-    height:300px !important;
-  }
-  #drink .drink-grid{
-    grid-template-columns:1fr !important;
-  }
-  #drink .drink-grid a{
-    border-right:0 !important;
-  }
-}
+/* v8 realistic painterly champagne: continuous curved liquid, specular highlights, droplets and effervescence */
+.real-pour{filter:url(#goldGlowV4)}
+.pour-core,.spill-core{fill:none;stroke:url(#champagneGold);stroke-linecap:round;stroke-linejoin:round;opacity:.86}
+.pour-core{stroke-width:13}.spill-core{stroke-width:8}.spill-core.thin{stroke-width:6;opacity:.7}
+.pour-highlight,.spill-highlight{fill:none;stroke:rgba(255,255,238,.92);stroke-linecap:round;stroke-width:2.8;stroke-dasharray:3 11;animation:pourTravel .5s linear infinite}
+.spill-highlight{stroke-width:2;animation-duration:.64s}
+.pour-drops circle{fill:#f4c54d;stroke:#fff6c9;stroke-width:1;animation:dropFall 1.05s ease-in infinite}
+.pour-drops circle:nth-child(2n){animation-delay:-.45s}.pour-drops circle:nth-child(3n){animation-delay:-.75s}
+.glass-bubbles circle{fill:#fff8cf;stroke:#e9b83d;stroke-width:.7;transform-box:fill-box;transform-origin:center;animation:fizz 1.45s ease-out infinite}
+.glass-bubbles circle:nth-child(2n){animation-delay:-.5s}.glass-bubbles circle:nth-child(3n){animation-delay:-.9s}
+@keyframes pourTravel{to{stroke-dashoffset:-28}}
+@keyframes dropFall{0%{opacity:0;transform:translateY(-7px) scale(.65)}25%{opacity:1}100%{opacity:0;transform:translateY(19px) scale(1)}}
+@keyframes fizz{0%{opacity:0;transform:translateY(8px) scale(.55)}30%{opacity:.95}100%{opacity:0;transform:translateY(-24px) scale(1.15)}}
+@media(prefers-reduced-motion:reduce){.pour-highlight,.spill-highlight,.pour-drops circle,.glass-bubbles circle{animation:none}}
